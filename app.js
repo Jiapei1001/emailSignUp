@@ -48,7 +48,7 @@ app.post('/', (req, res) => {
 
     const options = {
         method: 'POST',
-        auth: 'jiapei:cd155ab797a1a7da07e41cccc6430f2a-us7',
+        auth: process.env.API_KEY,
     }
 
     const request = https.request(url, options, (response) => {
