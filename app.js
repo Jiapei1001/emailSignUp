@@ -3,6 +3,9 @@ const bodyParser = require('body-parser')
 const request = require('request')
 const https = require('https')
 const { response } = require('express')
+const dotenv = require('dotenv')
+
+dotenv.config()
 
 const app = express()
 
@@ -45,6 +48,10 @@ app.post('/', (req, res) => {
     // api url from mailchimp
     // + audience API from account
     const url = 'https://us7.api.mailchimp.com/3.0/lists/b1d6470df7'
+
+    const key = process.env.API_KEY
+
+    console.log(process.env.API_KEY)
 
     const options = {
         method: 'POST',
