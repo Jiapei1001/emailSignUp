@@ -16,6 +16,7 @@ app.use(express.static('public'))
 
 app.use(bodyParser.urlencoded({ extended: true }))
 
+// send signup.html file, located in the current dir
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/signup.html')
 })
@@ -82,9 +83,3 @@ app.post('/failure', (req, res) => {
 app.listen(process.env.PORT || 3000, () => {
     console.log('Server is running on port 3000')
 })
-
-// api key
-// cd155ab797a1a7da07e41cccc6430f2a - us7
-
-// audience API
-// b1d6470df7
